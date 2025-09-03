@@ -1,0 +1,84 @@
+/* Sidebar.css - Scoped styles to avoid global conflicts */
+
+.edemy-sidebar-wrapper {
+  width: 4rem;
+  border-right: 1px solid rgba(107, 114, 128, 0.3);
+  min-height: 100vh;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.edemy-sidebar-nav-link {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.875rem 0;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: #6b7280;
+  transition: all 0.2s ease;
+  border-right: 6px solid transparent;
+  position: relative;
+}
+
+.edemy-sidebar-nav-link:hover {
+  background-color: rgba(156, 163, 175, 0.1);
+  border-right-color: rgba(156, 163, 175, 0.3);
+}
+
+.edemy-sidebar-nav-link.active {
+  background-color: #eef2ff;
+  border-right-color: rgba(99, 102, 241, 0.9);
+  color: #4f46e5;
+}
+
+.edemy-sidebar-nav-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
+}
+
+.edemy-sidebar-nav-text {
+  display: none;
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  .edemy-sidebar-wrapper {
+    width: 16rem;
+    padding: 0.5rem 0;
+  }
+
+  .edemy-sidebar-nav-link {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0.875rem 2.5rem;
+  }
+
+  .edemy-sidebar-nav-text {
+    display: block;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 767px) {
+  .edemy-sidebar-wrapper {
+    width: 4rem;
+  }
+
+  .edemy-sidebar-nav-link {
+    padding: 1rem 0;
+  }
+
+  .edemy-sidebar-nav-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}

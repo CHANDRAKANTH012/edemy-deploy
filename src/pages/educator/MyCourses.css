@@ -1,0 +1,129 @@
+/* MyCourses Component Styles - Highly Specific Selectors */
+
+/* Container styles */
+.my-courses-page-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .my-courses-page-container {
+    padding: 2rem;
+    padding-bottom: 0;
+  }
+}
+
+/* Content wrapper */
+.my-courses-page-content {
+  width: 100%;
+}
+
+/* Page title */
+.my-courses-page-title {
+  padding-bottom: 1rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+/* Table container styles */
+.my-courses-wrapper-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 56rem;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.375rem;
+  background-color: white;
+  border: 1px solid rgba(107, 114, 128, 0.2);
+}
+
+/* Table styles */
+.my-courses-data-table {
+  table-layout: fixed;
+  width: 100%;
+  overflow: hidden;
+  border-collapse: collapse;
+}
+
+@media (min-width: 768px) {
+  .my-courses-data-table {
+    table-layout: auto;
+  }
+}
+
+/* Table header styles */
+.my-courses-data-table thead {
+  color: #111827;
+  border-bottom: 1px solid rgba(107, 114, 128, 0.2);
+  font-size: 0.875rem;
+  text-align: left;
+}
+
+.my-courses-data-table thead th {
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Table body styles */
+.my-courses-data-table tbody {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.my-courses-data-table tbody tr {
+  border-bottom: 1px solid rgba(107, 114, 128, 0.2);
+}
+
+/* Table cell styles */
+.my-courses-data-table td {
+  padding: 0.75rem 1rem;
+}
+
+/* Course info cell with thumbnail */
+.my-courses-thumbnail-cell {
+  padding: 0.75rem 0.5rem;
+  padding-left: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .my-courses-thumbnail-cell {
+    padding: 0.75rem 1rem;
+    padding-left: 1rem;
+  }
+}
+
+/* Course thumbnail */
+.my-courses-thumbnail-img {
+  width: 4rem;
+  flex-shrink: 0;
+}
+
+/* Course title text */
+.my-courses-title-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .my-courses-title-text {
+    display: block;
+  }
+}

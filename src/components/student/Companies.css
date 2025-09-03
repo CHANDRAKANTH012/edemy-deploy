@@ -1,0 +1,43 @@
+/* Companies Component CSS */
+
+/* Main companies container */
+.companies-container {
+  padding-top: 4rem; /* pt-16 */
+  text-align: center;
+}
+
+/* "Trusted by learners from" text */
+.companies-text {
+  font-size: 1rem; /* text-base */
+  color: #6b7280; /* text-gray-500 */
+  margin-bottom: 1.25rem; /* default margin for spacing */
+}
+
+/* Company logos container */
+.companies-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem; /* gap-6 */
+  margin-top: 1.25rem; /* mt-5 */
+}
+
+/* Individual company logo */
+.company-logo {
+  width: 5rem; /* w-20 */
+  height: auto;
+  object-fit: contain;
+}
+
+/* Responsive breakpoints */
+@media (min-width: 768px) {
+  .companies-logos {
+    gap: 4rem; /* md:gap-16 */
+    margin-top: 2.5rem; /* md:mt-10 */
+  }
+  
+  .company-logo {
+    width: 7rem; /* md:w-28 */
+  }
+}

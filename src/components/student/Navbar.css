@@ -1,0 +1,150 @@
+/* Navbar Component CSS */
+
+/* Main navbar container */
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1rem; /* px-4 py-4 */
+  border-bottom: 1px solid #6b7280; /* border-b border-gray-500 */
+}
+
+/* Background variants */
+.navbar-container.bg-white {
+  background-color: white;
+}
+
+.navbar-container.bg-cyan-light {
+  background-color: rgba(165, 243, 252, 0.7); /* bg-cyan-100/70 */
+}
+
+/* Logo styles */
+.navbar-logo {
+  width: 7rem; /* w-28 */
+  cursor: pointer;
+}
+
+/* Desktop navigation container */
+.desktop-nav {
+  display: none;
+  align-items: center;
+  gap: 1.25rem; /* gap-5 */
+  color: #6b7280; /* text-gray-500 */
+}
+
+/* Navigation links container */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem; /* gap-5 */
+}
+
+/* Navigation buttons */
+.nav-button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: inherit;
+}
+
+.nav-button:hover {
+  color: #374151; /* hover:text-gray-800 */
+  transition: color 0.2s;
+}
+
+.nav-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #374151; /* hover:text-gray-800 */
+  transition: color 0.2s;
+}
+
+/* Create account button */
+.create-account-btn {
+  background-color: #2563eb; /* bg-blue-600 */
+  color: white;
+  padding: 0.5rem 1.25rem; /* px-5 py-2 */
+  border-radius: 9999px; /* rounded-full */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.create-account-btn:hover {
+  background-color: #1d4ed8; /* hover:bg-blue-700 */
+}
+
+/* Mobile navigation container */
+.mobile-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* gap-2 */
+  color: #6b7280; /* text-gray-500 */
+}
+
+/* Mobile navigation links */
+.mobile-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem; /* gap-1 */
+}
+
+/* Mobile user button */
+.mobile-user-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive breakpoints */
+@media (min-width: 640px) {
+  .navbar-container {
+    padding-left: 2.5rem; /* sm:px-10 */
+    padding-right: 2.5rem;
+  }
+  
+  .mobile-nav {
+    gap: 1.25rem; /* sm:gap-5 */
+  }
+  
+  .mobile-nav-links {
+    gap: 0.5rem; /* sm:gap-2 */
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-container {
+    padding-left: 3.5rem; /* md:px-14 */
+    padding-right: 3.5rem;
+  }
+  
+  .desktop-nav {
+    display: flex; /* md:flex */
+  }
+  
+  .mobile-nav {
+    display: none; /* md:hidden becomes visible */
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar-container {
+    padding-left: 9rem; /* lg:px-36 */
+    padding-right: 9rem;
+  }
+  
+  .navbar-logo {
+    width: 8rem; /* lg:w-32 */
+  }
+}
+
+/* Mobile-specific text size */
+@media (max-width: 639px) {
+  .mobile-nav-links {
+    font-size: 0.75rem; /* max-sm:text-xs */
+  }
+}

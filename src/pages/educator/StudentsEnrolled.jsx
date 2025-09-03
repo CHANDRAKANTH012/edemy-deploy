@@ -1,0 +1,123 @@
+// import React, { useEffect, useState } from "react";
+// import { dummyStudentEnrolled } from "../../assets/assets";
+// import Loading from "../../components/student/Loading";
+
+// const StudentsEnrolled = () => {
+//   const [enrolledStudents, setEnrolledStudents] = useState(null);
+//   const fetchEnrolledStudents = async () => {
+//     setEnrolledStudents(dummyStudentEnrolled);
+//   };
+
+//   useEffect(() => {
+//     fetchEnrolledStudents(dummyStudentEnrolled);
+//   }, [enrolledStudents]);
+
+//   return enrolledStudents ? (
+//     <div className="min-h-screen flex flex-col items-start justify-bewtween md:p-8 md:pb-0 p-4 pt-8 pb-0">
+//       <div className="flex flex-col items-center max-w-4xl w-full overflow-hidden rounded-md bg-white border border-gray-500/20">
+//         <table className="table-fixed md:table-auto w-full overflow-hidden pb-4">
+//           <thead className="text-gray-900 border-b border-gray-500/20 text-sm text-left">
+//             <tr>
+//               <th className="px-4 py-3 font-semibold text-center hidden sm:table-cell">
+//                 #
+//               </th>
+//               <th className="px-4 py-3 font-semibold">Student Name</th>
+//               <th className="px-4 py-3 font-semibold">Course Title</th>
+//               <th className="px-4 py-3 font-semibold hidden sm:table-cell">
+//                 Date
+//               </th>
+//             </tr>
+//           </thead>
+//           <tbody className="text-sm text-gray-500">
+//             {enrolledStudents.map((item, index) => (
+//               <tr key={index} className="border-b border-gray-500/20">
+//                 <td className="px-4 py-3 text-center hidden sm:table-cell">
+//                   {index + 1}
+//                 </td>
+//                 <td className="md:px-4 px-2 py-3 flex items-center space-x-3">
+//                   <img
+//                     src={item.student.imageUrl}
+//                     alt=""
+//                     className="w-9 h-9 rounded-full"
+//                   />
+//                   <span className="truncate">{item.student.name}</span>
+//                 </td>
+//                 <td className="px-4 py-3 truncate">{item.courseTitle}</td>
+//                 <td className="px-4 py-3 hidden sm:table-cell">
+//                   {new Date(item.purchaseDate).toLocaleDateString()}
+//                 </td>
+//               </tr>
+//             ))}
+//           </tbody>
+//         </table>
+//       </div>
+//     </div>
+//   ) : (
+//     <Loading />
+//   );
+// };
+
+// export default StudentsEnrolled;
+
+
+import React, { useEffect, useState } from "react";
+import { dummyStudentEnrolled } from "../../assets/assets";
+import Loading from "../../components/student/Loading";
+import "./StudentsEnrolled.css"; // Import the CSS file
+
+const StudentsEnrolled = () => {
+  const [enrolledStudents, setEnrolledStudents] = useState(null);
+  const fetchEnrolledStudents = async () => {
+    setEnrolledStudents(dummyStudentEnrolled);
+  };
+
+  useEffect(() => {
+    fetchEnrolledStudents(dummyStudentEnrolled);
+  }, [enrolledStudents]);
+
+  return enrolledStudents ? (
+    <div className="students-enrolled-container">
+      <div className="table-container">
+        <table className="students-table">
+          <thead className="table-header">
+            <tr>
+              <th className="table-header-center">
+                #
+              </th>
+              <th className="table-cell">Student Name</th>
+              <th className="table-cell">Course Title</th>
+              <th className="table-header-hidden">
+                Date
+              </th>
+            </tr>
+          </thead>
+          <tbody className="table-body">
+            {enrolledStudents.map((item, index) => (
+              <tr key={index} className="table-row">
+                <td className="table-cell-center">
+                  {index + 1}
+                </td>
+                <td className="student-info-cell">
+                  <img
+                    src={item.student.imageUrl}
+                    alt=""
+                    className="student-avatar"
+                  />
+                  <span className="truncate">{item.student.name}</span>
+                </td>
+                <td className="table-cell truncate">{item.courseTitle}</td>
+                <td className="table-cell-hidden">
+                  {new Date(item.purchaseDate).toLocaleDateString()}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  ) : (
+    <Loading />
+  );
+};
+
+export default StudentsEnrolled;

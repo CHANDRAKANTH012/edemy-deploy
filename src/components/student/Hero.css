@@ -1,0 +1,83 @@
+/* Hero Component CSS */
+
+/* Main hero container */
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 5rem; /* pt-20 */
+  padding-left: 1.75rem; /* px-7 */
+  padding-right: 1.75rem;
+  gap: 1.75rem; /* space-y-7 */
+  text-align: center;
+  background: linear-gradient(to bottom, rgba(165, 243, 252, 0.7)); /* bg-gradient-to-b from-cyan-100/70 */
+}
+
+/* Main heading */
+.hero-heading {
+  font-weight: bold;
+  color: #1f2937; /* text-gray-800 */
+  max-width: 48rem; /* max-w-3xl */
+  margin: 0 auto;
+  position: relative;
+  font-size: 2rem; /* text-home-heading-small - adjusted for mobile */
+  line-height: 1.2;
+}
+
+/* Blue text in heading */
+.hero-heading-highlight {
+  color: #2563eb; /* text-blue-600 */
+}
+
+/* Sketch decoration image */
+.hero-sketch {
+  display: none;
+  position: absolute;
+  bottom: -1.75rem; /* -bottom-7 */
+  right: 0;
+}
+
+/* Desktop description paragraph */
+.hero-description-desktop {
+  display: none;
+  color: #6b7280; /* text-gray-500 */
+  max-width: 42rem; /* max-w-2xl */
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Mobile description paragraph */
+.hero-description-mobile {
+  color: #6b7280; /* text-gray-500 */
+  max-width: 24rem; /* max-w-sm */
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Responsive breakpoints */
+@media (min-width: 768px) {
+  .hero-container {
+    padding-top: 9rem; /* md:pt-36 */
+    padding-left: 0; /* md:px-0 */
+    padding-right: 0;
+  }
+  
+  .hero-heading {
+    font-size: 3.5rem; /* text-home-heading-large - adjusted to match reference */
+    line-height: 1.1;
+  }
+  
+  .hero-sketch {
+    display: block; /* md:block */
+  }
+  
+  .hero-description-desktop {
+    display: block; /* md:block */
+  }
+  
+  .hero-description-mobile {
+    display: none; /* md:hidden */
+  }
+}

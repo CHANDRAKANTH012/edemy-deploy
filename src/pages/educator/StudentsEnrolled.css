@@ -1,0 +1,147 @@
+/* StudentsEnrolled Component Styles */
+
+/* Container styles */
+.students-enrolled-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .students-enrolled-container {
+    padding: 2rem;
+    padding-bottom: 0;
+  }
+}
+
+/* Table container styles */
+.table-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 56rem;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.375rem;
+  background-color: white;
+  border: 1px solid rgba(107, 114, 128, 0.2);
+}
+
+/* Table styles */
+.students-table {
+  table-layout: fixed;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .students-table {
+    table-layout: auto;
+  }
+}
+
+/* Table header styles */
+.table-header {
+  color: #111827;
+  border-bottom: 1px solid rgba(107, 114, 128, 0.2);
+  font-size: 0.875rem;
+  text-align: left;
+}
+
+.table-header th {
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+}
+
+.table-header-center {
+  text-align: center;
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .table-header-center {
+    display: table-cell;
+  }
+}
+
+.table-header-hidden {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .table-header-hidden {
+    display: table-cell;
+  }
+}
+
+/* Table body styles */
+.table-body {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.table-row {
+  border-bottom: 1px solid rgba(107, 114, 128, 0.2);
+}
+
+/* Table cell styles */
+.table-cell {
+  padding: 0.75rem 1rem;
+}
+
+.table-cell-center {
+  padding: 0.75rem 1rem;
+  text-align: center;
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .table-cell-center {
+    display: table-cell;
+  }
+}
+
+.table-cell-hidden {
+  padding: 0.75rem 1rem;
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .table-cell-hidden {
+    display: table-cell;
+  }
+}
+
+/* Student info cell styles */
+.student-info-cell {
+  padding: 0.75rem 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .student-info-cell {
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* Student avatar styles */
+.student-avatar {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+}
+
+/* Truncate text styles */
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

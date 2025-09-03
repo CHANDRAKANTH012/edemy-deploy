@@ -1,0 +1,107 @@
+/* Footer.css - Scoped styles to avoid global conflicts */
+
+.edemy-footer-wrapper {
+  background-color: white;
+  border-top: 1px solid #e5e7eb;
+  margin-top: auto;
+}
+
+.edemy-footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.edemy-footer-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.edemy-footer-logo {
+  width: 5rem;
+  height: auto;
+  object-fit: contain;
+  display: none;
+}
+
+.edemy-footer-divider {
+  height: 1.75rem;
+  width: 1px;
+  background-color: rgba(107, 114, 128, 0.6);
+  display: none;
+}
+
+.edemy-footer-copyright {
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.edemy-footer-social {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.edemy-footer-social-link {
+  transition: transform 0.2s ease;
+}
+
+.edemy-footer-social-link:hover {
+  transform: scale(1.1);
+}
+
+.edemy-footer-social-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  .edemy-footer-content {
+    flex-direction: row;
+  }
+
+  .edemy-footer-logo {
+    display: block;
+  }
+
+  .edemy-footer-divider {
+    display: block;
+  }
+
+  .edemy-footer-copyright {
+    font-size: 0.875rem;
+    text-align: left;
+    margin: 0;
+    padding: 1rem 0;
+  }
+
+  .edemy-footer-social {
+    margin-top: 0;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+  .edemy-footer-content {
+    flex-direction: column-reverse;
+    padding: 0 1rem;
+  }
+
+  .edemy-footer-copyright {
+    font-size: 0.75rem;
+  }
+
+  .edemy-footer-social {
+    margin-top: 1rem;
+  }
+}

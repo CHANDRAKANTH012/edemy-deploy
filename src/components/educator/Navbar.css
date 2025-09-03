@@ -1,0 +1,95 @@
+/* Navbar.css - Scoped styles to avoid global conflicts */
+
+.edemy-navbar-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: white;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.edemy-navbar-logo-link {
+  text-decoration: none;
+}
+
+.edemy-navbar-logo {
+  width: 7rem;
+  height: auto;
+  object-fit: contain;
+}
+
+.edemy-navbar-user-section {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  color: #6b7280;
+  position: relative;
+}
+
+.edemy-navbar-greeting {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #6b7280;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.edemy-navbar-profile-img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e5e7eb;
+}
+
+/* Clerk UserButton styling adjustment */
+.edemy-navbar-user-section .cl-userButtonTrigger {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  .edemy-navbar-logo {
+    width: 8rem;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .edemy-navbar-wrapper {
+    padding: 0.75rem 1rem;
+  }
+
+  .edemy-navbar-logo {
+    width: 6rem;
+  }
+
+  .edemy-navbar-user-section {
+    gap: 0.75rem;
+  }
+
+  .edemy-navbar-greeting {
+    font-size: 0.8rem;
+  }
+
+  .edemy-navbar-profile-img {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .edemy-navbar-wrapper {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .edemy-navbar-logo {
+    width: 5rem;
+  }
+
+  .edemy-navbar-greeting {
+    display: none; /* Hide greeting text on very small screens */
+  }
+}

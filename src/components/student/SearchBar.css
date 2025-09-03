@@ -1,0 +1,68 @@
+/* SearchBar Component CSS */
+
+/* Search form container */
+.search-form {
+  max-width: 36rem; /* max-w-xl */
+  width: 100%;
+  height: 3rem; /* h-12 */
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 1px solid rgba(107, 114, 128, 0.2); /* border-gray-500/20 */
+  border-radius: 0.375rem; /* rounded */
+}
+
+/* Search icon */
+.search-icon {
+  width: 2.5rem; /* w-10 */
+  padding: 0.75rem; /* px-3 */
+}
+
+/* Search input field */
+.search-input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  color: rgba(107, 114, 128, 0.8); /* text-gray-500/80 */
+  padding: 0 0.5rem;
+  font-size: 1rem;
+}
+
+.search-input::placeholder {
+  color: rgba(107, 114, 128, 0.8);
+}
+
+/* Search button */
+.search-button {
+  background-color: #2563eb; /* bg-blue-600 */
+  border-radius: 0.375rem; /* rounded */
+  color: white;
+  padding: 0.5rem 1.75rem; /* py-2 px-7 */
+  margin: 0.25rem; /* mx-1 */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.search-button:hover {
+  background-color: #1d4ed8; /* hover:bg-blue-700 */
+}
+
+/* Responsive breakpoints */
+@media (min-width: 768px) {
+  .search-form {
+    height: 3.5rem; /* md:h-14 */
+  }
+  
+  .search-icon {
+    width: auto; /* md:w-auto */
+  }
+  
+  .search-button {
+    padding: 0.75rem 2.5rem; /* md:py-3 md:px-10 */
+  }
+}
